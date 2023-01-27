@@ -1,0 +1,85 @@
+:root {
+  --gap-bigger: 3rem;
+  --gap-big: 2rem;
+  --gap: 1.5rem;
+  --gap-smaller: 1rem;
+  --gap-small: 0.5rem;
+}
+
+.is-pointer {
+  cursor: pointer;
+}
+
+.fake-dropzone {
+  border: solid 0.3rem yellow;
+}
+.digas {
+  height: 100vh;
+}
+
+body {
+  padding-top: var(--gap-bigger);
+  padding-left: var(--gap-bigger);
+  padding-right: var(--gap-big);
+}
+
+main {
+  max-width: max-content;
+}
+.base-margin {
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.bottom-gap {
+  margin-bottom: var(--gap);
+}
+
+.bottom-gap-smaller {
+  margin-bottom: var(--gap-smaller);
+}
+
+.bottom-gap-small {
+  margin-bottom: var(--gap-small);
+}
+
+.top-gap {
+  margin-top: var(--gap);
+}
+
+.right-gap {
+  margin-right: var(--gap);
+}
+
+.padded-right-small {
+  padding-right: var(--gap-small);
+}
+
+.padded-left-small {
+  padding-right: var(--gap-small);
+}
+
+/* http://bits.24ways.org/components/detail/article */
+kbd {
+  font-size: 90%;
+  background-color: #fff;
+  margin: 0 0.125rem;
+  border: 1px solid hsla(240, 7%, 50%, 0.25);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 1px 0 hsla(240, 7%, 50%, 0.25);
+}
+
+.is-borderless {
+  border: none;
+  background: transparent;
+}
+
+.is-inline-block {
+  display: flexbox;
+}
+
+.tag-bottom {
+  margin-bottom: 2.5rem;
+}
+
