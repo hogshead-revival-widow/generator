@@ -1,3 +1,5 @@
+export const isComboBox = (field: IField) =>
+    field.digasUIName !== undefined && field.digasUIName.startsWith('ComboBox');
 export const fields: IField[] = [
     {
         name: 'Titel',
@@ -11,9 +13,11 @@ export const fields: IField[] = [
     },
     {
         name: 'Ressort',
+        digasUIName: 'ComboBox10',
     },
     {
         name: 'Programm',
+        digasUIName: 'ComboBox14',
     },
     {
         name: 'Bearbeiter',
@@ -22,15 +26,19 @@ export const fields: IField[] = [
     },
     {
         name: 'Subressort',
+        digasUIName: 'ComboBox11',
     },
     {
         name: 'Sendung',
+        digasUIName: 'ComboBox15',
     },
     {
         name: 'Freigabe',
+        digasUIName: 'ComboBox9',
     },
     {
         name: 'Thema',
+        digasUIName: 'ComboBox12',
     },
     {
         name: 'Sendedatum',

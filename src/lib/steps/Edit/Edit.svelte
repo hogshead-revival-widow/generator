@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fade } from 'svelte/transition';
-
+    import { commentField } from '../../config/fields';
     import { input, step } from '../../stores';
     import Fields from './Fields.svelte';
     import { makeQuill } from './quill/make';
@@ -31,7 +31,22 @@
     <div id="toolbar">
         <Fields bind:currentName="{currentName}" />
 
-        <h1>Kommentar</h1>
+        <button
+            type="button"
+            class="ql-field"
+            on:click="{() => {
+                currentName = commentField.name;
+            }}"
+        >
+            <label
+                id=" {commentField.name}-label"
+                class="label is-inline is-pointer"
+                role="button"
+                for=" {commentField.name}"
+            >
+                {commentField.name}</label
+            >
+        </button>
     </div>
 
     <div class="has-background-white" style="min-height: 3.5em;">

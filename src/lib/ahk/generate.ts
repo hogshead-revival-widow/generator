@@ -1,5 +1,5 @@
 import { template, meta, escape } from '../config/template';
-import { commentField } from '../config/fields';
+import { commentField, isComboBox } from '../config/fields';
 
 const getVariableName = (name: string, config = meta.variable) =>
     `${config.prefix}${name}${config.suffix}`;
@@ -54,14 +54,22 @@ const writeToField = (
     escaper = escape
 ) => {
     let out = addComment(`Schreibe Wert in Feld: ${field.name}`);
-    out += templ;
+    if (isComboBox(field)) {
+        out += template.writeToComboBox;
+    } else {
+        out += templ;
+    }
+
     out = setVariable(out, 'digasUIName', getDigasUIName(field));
     return setVariable(out, 'escapedValue', escaper(value));
 };
 
 const getField = (fieldName: string, fields: IField[]) => {
-    const field = fields.find((field) => fieldName === field.name);
+    let field = fields.find((field) => fieldName === field.name);
+    const isCommentField = field === undefined && fieldName === commentField.name;
+    if (isCommentField) field = commentField;
     if (field === undefined) throw new Error(`Field ${fieldName} not found`);
+
     return field;
 };
 

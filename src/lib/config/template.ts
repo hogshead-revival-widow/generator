@@ -17,12 +17,16 @@ const writeToField = `
 ControlSetText, {{digasUIName}}, ,%WindowTitle%
 ControlSend, {{digasUIName}}, {Click}{{escapedValue}},  %WindowTitle%
 `;
+const writeToComboBox = `
+ControlSend, {{digasUIName}}, {Click}{{escapedValue}},%WindowTitle%
+`;
 const footer = `
 return
 `;
 
 export const template = {
     writeToField,
+    writeToComboBox,
     header,
     footer,
     readFromField,
