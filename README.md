@@ -1,4 +1,4 @@
-AHKs per No-Code-Editor für die DIGAS-Erfassungsmaske generieren. Die generierte Datei ist komplett nutzbar.
+AHKs per No-Code-Editor für die DIGAS-Erfassungsmaske generieren.
 
 # Entwicklung
 
